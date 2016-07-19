@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>维修知识库 by sai.zeng</title>
+    <meta name="viewport" content="height=device-height, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://terrycpp.github.io/gh-page/stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="https://terrycpp.github.io/gh-page/stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="https://terrycpp.github.io/gh-page/stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    
+    <h1 style="text-align:center">成品库拆垛机器人修改坐标参数</h1>
+      <h2>适用范围</h2>
+        <li>适用于ABB机器人</li>
+      <hr/>
+      <h2>作业准备 (安全评估、工具准备) </h2>
+        <h3>作业安全因素</h3>
+          <li>防止工具伤人</li>
+          <li>防止电机坠落</li>
+        <h3>工具准备</h3>
+
+      <hr/>
+      <h2>作业步骤</h2>
+        <p> 
+          成品出库机器人抓取烟箱分为硬包和软包两组参数，目前烟箱类型有旧烟箱、外来烟、新烟箱，由于旧烟箱和外来烟经过运输和人工搬运码垛后，与自产的新烟箱在尺寸方面存在较大误差，导致机器人在抓取烟箱过程报警较为频繁，需人工对机器人的Z坐标参数进行修改，以抵消烟箱尺寸的误差，降低机器人报警的次数。
+        </p>
+        <li>1)将机器人钥匙开关打到“手动”状态</li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数1.png" height="30%"/> 
+        </p>
+        <li>2)单击手操器触摸屏上“程序数据”</li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数2.png" height="30%"/> 
+        </p>
+        <li>3)双击“wobjdata”</li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数3.png" height="30%"/> 
+        </p>
+        <li>4)双击“数组”</li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数4.png" height="30%"/> 
+        </p>
+        <li>5)单击相应的组件</li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数5.png" height="30%"/> 
+        </p>
+        <li>6)单击Z字段</li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数6.png" height="30%"/> 
+        </p>
+        <li>7)通过小键盘修改坐标参数，减小数值为压低，增大数值为抬高，建议每次修改以3mm为单位 </li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数7.png" height="30%"/> 
+        </p>
+        <li>8)修改数值后点击“确定”</li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数8.png" height="30%"/>  
+        </p>
+        <li>9)点击“关闭”</li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数9.png" height="30%"/> 
+        </p>
+        <li>10)点击“pp移到main”手动操作机器人回原点</li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数10.png" height="30%"/> 
+        </p>
+        <li>11)将机器人打回自动状态继续生产,若需再修改重复上述过程</li>
+        <p style="text-align:center"> 
+          <img src="png/机器人修改坐标参数11.png" height="30%"/> 
+        </p>
+    <hr/>
+    <h2>效果检查</h2>
+      <h3>验收标准</h3>
+        <li>各零部件并无变形</li>
+        <li>电机正常无损坏</li>
+      <h3>作业结束</h3>
+        <li>收拾现场，零件是否漏装，工具无遗落</li>
+        <li>最后保持现场清洁</li>
+
+    <hr/>
+    <h2>总结</h2>
+      <li>装配过程应注意配合要求，防止安装失败</li>
+      <li>安装过程需要对编码器参数进行校准</li>
+  </body>
+</html>
